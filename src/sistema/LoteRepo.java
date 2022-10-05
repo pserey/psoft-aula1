@@ -6,7 +6,7 @@ public class LoteRepo {
     private HashMap<Integer, Lote> lotes = new HashMap<Integer, Lote>();
     private int key = 0;
 
-    public void criaLote(Lote lote) {
+    public void guardaLote(Lote lote) {
         lotes.put(key, lote);
         key++;
     }
