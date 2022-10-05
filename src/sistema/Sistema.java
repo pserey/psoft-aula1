@@ -6,10 +6,12 @@ public class Sistema {
 
     public void criaProduto(String nome, String fabricante, double preco) {
         Produto prod = new Produto(nome, fabricante, preco);
-
+        pr.guardaProduto(prod);
     }
 
     public void criaLote(Produto prod, int quantidade, String dov) {
+        Lote lote = new Lote(prod, quantidade, dov);
+        lr.guardaLote(lote);
     }
 
     public String listaLotes() {
