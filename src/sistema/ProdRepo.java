@@ -1,5 +1,6 @@
 package sistema;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 public class ProdRepo {
@@ -16,7 +17,7 @@ public class ProdRepo {
         key++;
     }
 
-    public String listaProdutos() {
-        return produtos.toString();
+    public Collection<Produto> listaProdutos() {
+        return produtos.values();
     }
 }

@@ -1,5 +1,8 @@
 package sistema;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Sistema {
     private ProdRepo pr;
     private LoteRepo lr;
@@ -24,6 +27,13 @@ public class Sistema {
     }
 
     public String listaProdutos() {
-        return pr.listaProdutos();
+        Collection<Produto> produtos = pr.listaProdutos();
+        ArrayList<String> saida = new ArrayList<String>();
+
+        for (Produto produto : produtos) {
+            saida.add(produto.getNome());
+        }
+
+        return saida.toString();
     }
 }
