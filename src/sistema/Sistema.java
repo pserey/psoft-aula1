@@ -12,14 +12,18 @@ public class Sistema {
         lr = new LoteRepo();
     }
 
-    public void criaProduto(String nome, String fabricante, double preco) {
+    public Produto criaProduto(String nome, String fabricante, double preco) {
         Produto prod = new Produto(nome, fabricante, preco);
         pr.guardaProduto(prod);
+
+        return prod;
     }
 
-    public void criaLote(Produto prod, int quantidade, String dov) {
+    public Lote criaLote(Produto prod, int quantidade, String dov) {
         Lote lote = new Lote(prod, quantidade, dov);
         lr.guardaLote(lote);
+
+        return lote;
     }
 
     public String listaLotes() {

@@ -7,12 +7,12 @@ public class Controller {
         s = new Sistema();
     }
 
-    public void criaProduto(String nome, String fabricante, double preco) {
-        s.criaProduto(nome, fabricante, preco);
+    public Produto criaProduto(String nome, String fabricante, double preco) {
+        return s.criaProduto(nome, fabricante, preco);
     }
 
-    public void criaLote(Produto prod, int quantidade, String dov) {
-        s.criaLote(prod, quantidade, dov);
+    public Lote criaLote(Produto prod, int quantidade, String dov) {
+        return s.criaLote(prod, quantidade, dov);
     }
 
     public String listaLotes() {
