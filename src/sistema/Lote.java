@@ -11,6 +11,11 @@ public class Lote {
         this.quantidade = quantidade;
     }
 
+    public String toString() {
+        String saida = this.prod.nome + "; " + this.quantidade + "; " + this.datav;
+        return saida;
+    }
+
     public int getQuantidade() {
         return this.quantidade;
     }

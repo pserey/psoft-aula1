@@ -23,7 +23,14 @@ public class Sistema {
     }
 
     public String listaLotes() {
-        return lr.listaLotes();
+        Collection<Lote> lotes = lr.listaLotes();
+        ArrayList<String> saida = new ArrayList<String>();
+
+        for (Lote lote : lotes) {
+            saida.add(lote.toString());
+        }
+
+        return saida.toString();
     }
 
     public String listaProdutos() {

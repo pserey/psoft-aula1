@@ -16,8 +16,8 @@ public class LoteRepo {
         key++;
     }
 
-    public String listaLotes() {
-        return lotes.toString();
+    public Collection<Lote> listaLotes() {
+        return lotes.values();
     }
 
 }
