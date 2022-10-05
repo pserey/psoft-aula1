@@ -1,4 +1,4 @@
-package src;
+package sistema;
 
 public class Produto {
     String nome;
