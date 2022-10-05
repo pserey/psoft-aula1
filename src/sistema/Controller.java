@@ -3,6 +3,10 @@ package sistema;
 public class Controller {
     public Sistema s;
 
+    public Controller() {
+        s = new Sistema();
+    }
+
     public void criaProduto(String nome, String fabricante, double preco) {
         s.criaProduto(nome, fabricante, preco);
     }

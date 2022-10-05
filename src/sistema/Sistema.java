@@ -4,6 +4,11 @@ public class Sistema {
     private ProdRepo pr;
     private LoteRepo lr;
 
+    public Sistema() {
+        pr = new ProdRepo();
+        lr = new LoteRepo();
+    }
+
     public void criaProduto(String nome, String fabricante, double preco) {
         Produto prod = new Produto(nome, fabricante, preco);
         pr.guardaProduto(prod);
