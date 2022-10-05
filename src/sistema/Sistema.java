@@ -1,6 +1,22 @@
+package sistema;
+
 public class Sistema {
-    public static void main(String[] args) {
-        Produto cadeira = new Produto("Cadeira", "Cadeiras LTDA", 25.30);
-        Lote cadeiras = new Lote(cadeira, 20, "12/09/2022");
+    private ProdRepo pr;
+    private LoteRepo lr;
+
+    public void criaProduto(String nome, String fabricante, double preco) {
+        Produto prod = new Produto(nome, fabricante, preco);
+
+    }
+
+    public void criaLote(Produto prod, int quantidade, String dov) {
+    }
+
+    public String listaLotes() {
+        return lr.listaLotes();
+    }
+
+    public String listaProdutos() {
+        return pr.listaProdutos();
     }
 }
